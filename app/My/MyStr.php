@@ -19,6 +19,15 @@ class MyStr
     public static function str_retrive_left($instr ,$delimiter):string
     {
         $pos = strrpos ($instr,$delimiter) ;
+
+        $str1 = substr($instr , $pos) ;
+
+
+
+
         return (  substr($instr , $pos) );
     }
+
+
+
 }

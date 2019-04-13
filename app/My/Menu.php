@@ -102,14 +102,18 @@ EOD;
             $action_left =   MyStr::str_retrive_left($child['action']  , '/') ;
 
 
+
+            if(strpos($url,$child['action']) !== false){
+                $show_str = 'show' ;
+            }
+
+
 //            var_dump($left .'|' .$action_left) ;
 
-            if (strcmp($left,$action_left)== 0)
-            {
-                $show_str = 'show' ;
-//                dd($show_str) ;
-
-            }
+//            if (strcmp($left,$action_left)== 0)
+//            {
+//                $show_str = 'show' ;
+//            }
 
 
             $html = <<<EOD

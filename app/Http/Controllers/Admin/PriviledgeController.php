@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 use App\Model\AdminRole;
 use App\My\Helpers ;
+use function Couchbase\defaultDecoder;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\URL ;
@@ -38,6 +39,41 @@ class PriviledgeController extends Controller
 
         $roles = DB::table('admin_roles')->paginate(10);
         return view('admin.priviledge.roles', ['roles' => $roles]);
+
+    }
+    public function add_role(){
+
+//dd('add_role') ;
+        return view('admin.priviledge.add_role');
+
+    }
+    public function add_role_post(Request $request){
+        $data = $this->validate($request,[
+            'name'=>'required|min:5',
+            'remark'=>'required|min:8',
+        ]) ;
+
+
+
+        dd($data) ;
+
+
+
+        if(1)
+        {
+
+            session()->flash(
+                'success','登陆成功'
+            ) ;
+            return redirect('/' ) ;
+        }
+        else
+        {
+            session()->flash(
+                'success','登陆失败'
+            ) ;
+            return back() ;
+        }
 
     }
 

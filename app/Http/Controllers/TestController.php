@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Redis ;
 use App\Biz\PCACodeBiz ;
 use App\My\Category ;
 use App\My\Menu ;
+use IntlChar ;
 class TestController extends Controller
 {
     public function t1(Request $request)
@@ -117,9 +118,12 @@ print_r("==================================" ) ;
 
 //        Menu::gen_menu() ;
 
-        $a = DB::select("select version()") ;
+//        $a = DB::select("select version()") ;
 
+        $str="/2";//此时可以用单引号
+//        var_dump( IntlChar::isdigit( trim($str,'/'))  );
 
+        var_dump(  IntlChar::isdigit(trim($str,'/')) );
 
 
     }
