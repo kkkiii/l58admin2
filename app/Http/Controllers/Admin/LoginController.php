@@ -1,5 +1,6 @@
 <?php
 namespace App\Http\Controllers\Admin;
+use App\Biz\Module;
 use App\Model\Admin;
 use App\My\Helpers;
 use App\My\MyAuth;
@@ -34,6 +35,13 @@ class LoginController extends Controller
 
         if(MyAuth::check (  $data['password'],$user->password))
         {
+
+           $menus_modules =  Module::menus_routes($user->id) ;
+
+
+            session(['menus_ids' =>$menus_modules[0]]);
+            session(['allow_routes' =>$menus_modules[1]]);
+
 
             Auth::login($user) ;
             session()->flash(

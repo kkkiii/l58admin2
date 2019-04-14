@@ -1,5 +1,7 @@
 <?php
 namespace App\My;
+use App\Biz\Module;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB ;
 use Illuminate\Support\Facades\URL ;
 class Menu{
@@ -28,6 +30,8 @@ class Menu{
          *
          */
 
+        $in_str = implode(',', session('menus_ids') );
+
         $sql = <<<EOD
 SELECT
 menus.id,
@@ -36,7 +40,8 @@ menus.title,
 menus.action
 FROM
 menus
-
+-- WHERE 
+-- id in ($in_str)
 EOD;
         $tree_nodes = DB::connection()
             ->select($sql);

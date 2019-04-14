@@ -1,8 +1,12 @@
 <?php
 namespace App\Http\Controllers;
 use App\Car;
+use App\Model\Module;
 use App\My\Helpers;
+use Faker\Provider\HtmlLorem;
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Crypt;
 //use Illuminate\Support\Facades\Redis;
 //use Illuminate\Support\Facades\Cache;
@@ -129,10 +133,64 @@ print_r("==================================" ) ;
     }
 
     public function t4(Request $request){
+        dd(Auth::id()) ;
        return view('admin.t4') ;
     }
 
     public function t5(Request $request){
+
+
+
+        $array = \App\Biz\Module::menus_routes(2) ;
+
+        Helpers::p($array) ;
+
+        $modules =collect (DB::select('SELECT * from v_admin_id2modules where admin_id = 1'));
+
+
+        $menus_array  = $modules->pluck('menus')->map(function ($item, $key) {
+            return json_decode($item);
+        })->flatten ()->all();
+
+        $routes_array  = $modules->pluck('routes')->map(function ($item, $key) {
+            return json_decode($item);
+        })->flatten ()->all();
+
+        Helpers::p($routes_array) ;
+
+
+        die() ;
+
+
+//        $module = Module::first() ;
+//
+//
+//       var_dump(json_decode($module->menus)) ;
+//
+//        var_dump(json_decode($module->routes)) ;
+
+
+
+//        die() ;
+        $sql = <<<EOD
+SELECT
+menus.id,
+menus.parentid,
+menus.title,
+menus.action
+FROM
+menus
+
+EOD;
+        $tree_nodes = DB::connection()
+            ->select($sql);
+
+        $arr = Helpers::objectToArray($tree_nodes) ;
+        $resut =  Category::unlimitedForlayer($arr) ;
+
+        Helpers::p($resut) ;
+die() ;
+
         return view('admin.t5') ;
     }
 

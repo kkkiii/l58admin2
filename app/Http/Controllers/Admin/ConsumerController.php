@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\URL ;
 use Illuminate\Support\Facades\DB ;
 use Illuminate\Support\Facades\Redirect ;
+use App\My\MyStr ;
 class ConsumerController extends Controller
 {
     public function __construct()
@@ -20,9 +21,8 @@ class ConsumerController extends Controller
 
     public function list(){
 //        $url = URL::current() ;
-//     $res =   Helpers::str_retrive_left($url , '/') ;
-//print_r($res) ; die() ;
-
+//        MyStr::purify_url($url , '/admin/') ;
+//       var_dump(  MyStr::purify_admin_url() );
 
 //        var_dump($url) ;
 //        $pos = strrpos ($url,'/') ;

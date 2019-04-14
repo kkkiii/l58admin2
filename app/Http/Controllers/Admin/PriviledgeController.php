@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 use App\Model\AdminRole;
 use App\My\Helpers ;
+use App\My\MyStr;
 use function Couchbase\defaultDecoder;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -78,6 +79,8 @@ class PriviledgeController extends Controller
     }
 
     public function edit_role($id){
+//        $url = URL::current() ;
+//        MyStr::purify_url($url , '/admin/') ;
 
         $role = DB::table('admin_roles')->where('id', $id)->first();
         return view('admin.priviledge.edit_role', ['role' => $role]);
