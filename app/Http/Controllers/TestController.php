@@ -194,5 +194,30 @@ die() ;
         return view('admin.t5') ;
     }
 
+    public function t6(Request $request){
+
+
+//      $rest =  Redis::set('name', 'Taylor');
+
+
+//        Redis::lpush('runoobkey', 'redis');
+//        Redis::lpush('runoobkey', 'mongo');
+//        Redis::lpush('runoobkey', 'mysql');
+
+//        Helpers::p(Redis::LRANGE('runoobkey',0,10) ) ;
+
+//        Redis::sadd ('s1' ,'a');
+//        Redis::sadd ('s1' ,'a');
+//        Redis::sadd ('s1' ,'b');
+//        Redis::sadd ('s1' ,'b');
+
+
+
+        Helpers::p(Redis::SMEMBERS('s1')) ;
+
+//        Helpers::p(Redis::get('name') ) ;
+
+
+    }
 
 }

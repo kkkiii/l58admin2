@@ -17,4 +17,25 @@ Route::prefix('admin')->namespace('Admin')->group(function () {
     Route::get('/consumer.list', 'ConsumerController@list');
     Route::get('/consumer.lock/{id}', 'ConsumerController@lock');
     Route::get('/consumer.del/{id}', 'ConsumerController@del');
+
+    Route::get('/satisfactionsurvey.company_advice', 'SatisfactionSurvey@company_advice');
+    Route::get('/satisfactionsurvey.company_tipoff_gov', 'SatisfactionSurvey@company_tipoff_gov');
+    Route::get('/satisfactionsurvey.consumer_advice', 'SatisfactionSurvey@consumer_advice');
+    Route::get('/satisfactionsurvey.consumer_tipoff_company', 'SatisfactionSurvey@consumer_tipoff_company');
+    Route::get('/satisfactionsurvey.consumer_tipoff_gov', 'SatisfactionSurvey@consumer_tipoff_gov');
+
+    Route::get('/infopubcontroller.consume_warning', 'InfoPubController@consume_warning');
+    Route::get('/infopubcontroller.hot_consult', 'InfoPubController@hot_consult');
+    Route::get('/infopubcontroller.gov_pub', 'InfoPubController@gov_pub');
+
+    Route::get('/complaints.list', 'ComplaintsController@list');
+    Route::get('/complaints.passed', 'ComplaintsController@passed');
+    Route::get('/complaints.done', 'ComplaintsController@done');
+    Route::get('/complaints.category_list', 'ComplaintsController@done');
+
+    Route::get('/consult.visitors', 'ConsultController@visitors');
+    Route::get('/consult.offline', 'ConsultController@offline');
+
+    Route::get('/brand.list', 'BrandController@list');
+
 });

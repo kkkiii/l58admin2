@@ -6,7 +6,9 @@ use App\My\MyStr;
 use Closure;
 use App\My\Helpers ;
 use Illuminate\Session\Middleware\StartSession ;
+use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpKernel\Exception\HttpException ;
+use Illuminate\Support\Facades\Redis ;
 class ContrAccess
 {
     /**
@@ -50,11 +52,13 @@ class ContrAccess
             /** @var Response $response */
             $response = $next($request);
 
-            $pass_routes =  [ 'login','logout' , 'home','store'
 
+            if (Auth::guest())
+                return $response;
+
+            $pass_routes =  [
+                'logout' , 'home','store'
             ] ;
-
-
 
 //            Helpers::p(session('menus_ids')) ;
             $allow_arr  = (session('allow_routes')) ;
@@ -63,7 +67,9 @@ class ContrAccess
 //            Helpers::p($allow_arr) ;
 //            Helpers::p($route) ;
 //            Helpers::p($route2) ;
-        if (!in_array($route, $allow_arr) && !in_array($route2, $pass_routes) )
+        if (!in_array($route, $allow_arr)
+            &&!in_array($route2, $pass_routes)
+        )
          throw new HttpException(403,'不让访问');
 
             return $response;
