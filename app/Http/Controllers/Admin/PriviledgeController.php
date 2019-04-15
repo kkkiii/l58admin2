@@ -114,4 +114,10 @@ class PriviledgeController extends Controller
         return redirect(route('priviledge.roles'));
     }
 
+    public function mgrs()
+    {
+        return view('admin.priviledge.mgrs')  ;
+
+    }
+
 }

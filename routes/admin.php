@@ -9,6 +9,7 @@ Route::post('login/store', 'Admin\LoginController@store')->name('login.store');
 Route::prefix('admin')->namespace('Admin')->group(function () {
     Route::get('/priviledge.list', 'PriviledgeController@list')->name('priviledge.list');
     Route::get('/priviledge.roles', 'PriviledgeController@roles')->name('priviledge.roles');
+    Route::get('/priviledge.mgrs', 'PriviledgeController@mgrs')->name('priviledge.mgrs');
     Route::get('/priviledge.edit_role/{id}', 'PriviledgeController@edit_role')->name('priviledge.edit_role');
     Route::post('/priviledge.edit_role_post', 'PriviledgeController@edit_role_post')->name('priviledge.edit_role_post');
     Route::get('/priviledge.del/{id}', 'PriviledgeController@del')->name('priviledge.del');
@@ -57,4 +58,5 @@ Route::prefix('admin')->namespace('Admin')->group(function () {
     Route::get('/expert.list', 'ExpertController@list');
     Route::get('/msgpush.list', 'MsgPushController@list');
     Route::get('/opinionfeedback.list', 'OpinionFeedbackController@list');
+    Route::get('/version.list', 'VersionController@list');
 });

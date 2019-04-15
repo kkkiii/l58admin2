@@ -40,8 +40,8 @@ menus.title,
 menus.action
 FROM
 menus
--- WHERE 
--- id in ($in_str)
+ WHERE 
+ id in ($in_str)
 EOD;
         $tree_nodes = DB::connection()
             ->select($sql);

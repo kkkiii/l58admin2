@@ -5,12 +5,12 @@ use App\Http\Controllers\Controller;
 use App\My\Helpers;
 use Illuminate\Http\Request;
 
-class OpinionFeedbackController extends Controller
+class VersionController extends Controller
 {
     public function list()
     {
-
-        return view('admin.opinionfeedback.list')  ;
+      
+        return view('admin.version.list')  ;
 
     }
 
