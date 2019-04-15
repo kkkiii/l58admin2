@@ -37,5 +37,24 @@ Route::prefix('admin')->namespace('Admin')->group(function () {
     Route::get('/consult.offline', 'ConsultController@offline');
 
     Route::get('/brand.list', 'BrandController@list');
+    Route::get('/report.list', 'ReportController@list');
 
+    Route::get('/redblackboardcontroller.red_top', 'RedBlackBoardController@red_top');
+    Route::get('/redblackboardcontroller.black_top', 'RedBlackBoardController@black_top');
+    Route::get('/redblackboardcontroller.prev', 'RedBlackBoardController@prev');
+
+    Route::get('/conplaintsfocus.list', 'ConplaintsFocusController@list');
+    Route::get('/media.list', 'MediaController@list');
+    Route::get('/linkageorg.list', 'LinkageOrgController@list');
+    Route::get('/expertjudge.apply', 'ExpertJudgeController@apply');
+    Route::get('/expertjudge.reply', 'ExpertJudgeController@reply');
+
+    Route::get('/enterprisemgr.user_list', 'EnterpriseMgrController@user_list');
+    Route::get('/enterprisemgr.acct_list', 'EnterpriseMgrController@acct_list');
+    Route::get('/govmgr.org_list', 'GovMgrController@org_list');
+    Route::get('/govmgr.user_list', 'GovMgrController@user_list');
+
+    Route::get('/expert.list', 'ExpertController@list');
+    Route::get('/msgpush.list', 'MsgPushController@list');
+    Route::get('/opinionfeedback.list', 'OpinionFeedbackController@list');
 });
