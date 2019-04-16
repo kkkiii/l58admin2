@@ -1,43 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="673747be-aec5-46bc-992f-449d64a2255c" name="Default Changelist" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Model/AdminRolesModel.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/My/AccessFilter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/priviledge/add_admin.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/priviledge/modules2role.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/BrandController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/BrandController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ConsultController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ConsultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ConsumerController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ConsumerController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/EnterpriseMgrController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/EnterpriseMgrController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ExpertController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ExpertController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ExpertJudgeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ExpertJudgeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/InfoPubController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/InfoPubController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LinkageOrgController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LinkageOrgController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/MediaController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MediaController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/MsgPushController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MsgPushController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/OpinionFeedbackController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/OpinionFeedbackController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PriviledgeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PriviledgeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/RedBlackBoardController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/RedBlackBoardController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReportController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReportController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SatisfactionSurvey.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SatisfactionSurvey.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/VersionController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/VersionController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Kernel.php" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Model/Admin.php" afterPath="$PROJECT_DIR$/app/Model/Admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/My/Menu.php" afterPath="$PROJECT_DIR$/app/My/Menu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/My/MyAuth.php" afterPath="$PROJECT_DIR$/app/My/MyAuth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/My/MyStr.php" afterPath="$PROJECT_DIR$/app/My/MyStr.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/login.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/login.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/priviledge/add_role.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/priviledge/add_role.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/priviledge/mgrs.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/priviledge/mgrs.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/priviledge/roles.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/priviledge/roles.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/adminbase.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/adminbase.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/admin.php" afterPath="$PROJECT_DIR$/routes/admin.php" />
-    </list>
+    <list default="true" id="673747be-aec5-46bc-992f-449d64a2255c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -371,14 +335,6 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -390,7 +346,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="db" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -582,12 +538,12 @@
       <workItem from="1555225691667" duration="16895000" />
       <workItem from="1555290165837" duration="455000" />
       <workItem from="1555293131785" duration="20811000" />
-      <workItem from="1555377241444" duration="25817000" />
+      <workItem from="1555377241444" duration="25885000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74544000" />
+    <option name="totallyTimeSpent" value="74612000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
