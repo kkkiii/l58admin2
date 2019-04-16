@@ -31,7 +31,7 @@
                 <td>{{$item->status}}</td>
 
                 <td>
-                    <a href="/admin/priviledge.edit_role/{{$item->id}}" class="btn btn-info">赋权</a>
+                    <a href="/admin/priviledge.modules2role/{{$item->id}}" class="btn btn-info">模块</a>
                     <a href="/admin/priviledge.edit_role/{{$item->id}}" class="btn btn-info">编辑</a>
                     <a href="/admin/priviledge.del/{{$item->id}}" class="btn btn-info">删除</a>
                 </td>

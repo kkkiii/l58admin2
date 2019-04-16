@@ -1,12 +1,14 @@
 <?php
+use App\My\AccessFilter ;
 Route::get('/home', 'Admin\IndexController@home');
 Route::get('/', 'Admin\LoginController@login');
 Route::get('/login', 'Admin\LoginController@login')->name('login');
 Route::get('/logout', 'Admin\LoginController@logout')->name('logout');
-Route::post('login/store', 'Admin\LoginController@store')->name('login.store');
+Route::post('login', 'Admin\LoginController@store')->name('login.store');
 
 
-Route::prefix('admin')->namespace('Admin')->group(function () {
+
+Route::group(['prefix' => 'admin' , 'filter' => 'AccessFilter@filter','namespace'=>'Admin'],function () {
     Route::get('/priviledge.list', 'PriviledgeController@list')->name('priviledge.list');
     Route::get('/priviledge.roles', 'PriviledgeController@roles')->name('priviledge.roles');
     Route::get('/priviledge.mgrs', 'PriviledgeController@mgrs')->name('priviledge.mgrs');
@@ -14,7 +16,15 @@ Route::prefix('admin')->namespace('Admin')->group(function () {
     Route::post('/priviledge.edit_role_post', 'PriviledgeController@edit_role_post')->name('priviledge.edit_role_post');
     Route::get('/priviledge.del/{id}', 'PriviledgeController@del')->name('priviledge.del');
     Route::get('/priviledge.add_role', 'PriviledgeController@add_role')->name('priviledge.add_role');
+    Route::get('/priviledge.add_admin', 'PriviledgeController@add_admin')->name('priviledge.add_admin');
+    Route::post('/priviledge.add_role',   'PriviledgeController@add_admin_post')->name('priviledge.add_admin_post');
+    Route::get('/priviledge.roles2mgrs', 'PriviledgeController@roles2mgrs')->name('priviledge.roles2mgrs');
+    Route::get('/priviledge.roles2mgrs_fill/{id}', 'PriviledgeController@roles2mgrs_fill')->name('priviledge.roles2mgrs_fill');
+    Route::post('/priviledge.roles2mgrs_fill', 'PriviledgeController@roles2mgrs_fill_post')->name('priviledge.roles2mgrs_fill_post');
     Route::post('/priviledge.add_role_post', 'PriviledgeController@add_role_post')->name('priviledge.add_role_post');
+    Route::get('/priviledge.modules2role/{id}', 'PriviledgeController@modules2role')->name('priviledge.modules2role');
+    Route::post('/priviledge.modules2role', 'PriviledgeController@modules2role_post')->name('priviledge.modules2role_post');
+
     Route::get('/consumer.list', 'ConsumerController@list');
     Route::get('/consumer.lock/{id}', 'ConsumerController@lock');
     Route::get('/consumer.del/{id}', 'ConsumerController@del');

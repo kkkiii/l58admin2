@@ -22,7 +22,6 @@ class LoginController extends Controller
     }
     public function login()
     {
-        //
         return view('admin.login');
     }
     public function store(Request $request)
@@ -41,7 +40,7 @@ class LoginController extends Controller
 
             session(['menus_ids' =>$menus_modules[0]]);
             session(['allow_routes' =>$menus_modules[1]]);
-
+            session(['uname' =>$user->uname]);
 
             Auth::login($user) ;
             session()->flash(

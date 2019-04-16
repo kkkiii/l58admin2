@@ -2,28 +2,18 @@
 /**
  * Created by PhpStorm.
  * User: 7
- * Date: 2019/4/1
- * Time: 17:18
+ * Date: 2019/4/11
+ * Time: 18:55
  */
 
 namespace App\My;
-use App\My\Helpers ;
-
-class MyAuth
+class AccessFilter
 {
-    public static function check($plain ,$pwd_hash)
+    public function filter()
     {
-        $authcode = env('APP_AUTHCODE') ;
+        return "/" ;
 
-        return  "###" . md5(md5( $authcode . $plain))  == $pwd_hash;
-    }
-    public static function set_pwd($plain ):string
-    {
-        $authcode = env('APP_AUTHCODE') ;
-     return   "###" . md5(md5( $authcode . $plain)) ;
-    }
 
-    public static function can_access (){
         $allow_arr  = (session('allow_routes')) ;
         $route =  MyStr::purify_admin_url() ;
         $route2 =  MyStr::purify_url_without_host() ;

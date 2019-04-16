@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\URL ;
 use Illuminate\Support\Facades\DB ;
 use Illuminate\Support\Facades\Redirect ;
 use App\My\MyStr ;
-class ConsumerController extends Controller
+class ConsumerController extends AdminBase
 {
     public function __construct()
     {
@@ -20,20 +20,12 @@ class ConsumerController extends Controller
     }
 
     public function list(){
-//        $url = URL::current() ;
-//        MyStr::purify_url($url , '/admin/') ;
-//       var_dump(  MyStr::purify_admin_url() );
-
-//        var_dump($url) ;
-//        $pos = strrpos ($url,'/') ;
-//        var_dump($pos) ;
-//      print_r(  substr($url , $pos) );
-//
-//        die() ;
+        parent::check_module() ;
         $consumers = DB::table('consumers')->paginate(15);
         return view('admin.consumer.list', ['consumers' => $consumers]);
     }
     public function lock($id){
+        parent::check_module() ;
         DB::table('consumers')
             ->where('id', $id)
             ->update(['is_lock' => 1]);
@@ -42,7 +34,7 @@ class ConsumerController extends Controller
 
 
     public function del($id){
-
+        parent::check_module() ;
         DB::table('consumers')->where('id', $id)->delete();
 
         return Redirect::to('admin/consumer.list');

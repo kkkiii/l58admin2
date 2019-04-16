@@ -7,10 +7,6 @@ use Illuminate\Support\Facades\URL ;
 class Menu{
 
 
-
-
-
-
     static public function gen_menu(){
         /**
          * 模块过滤 sql
@@ -32,6 +28,14 @@ class Menu{
 
         $in_str = implode(',', session('menus_ids') );
 
+
+
+        if (empty($in_str))
+            $where_clause = "where id in(0)" ;
+        else
+        $where_clause = " where id in($in_str)" ;
+
+
         $sql = <<<EOD
 SELECT
 menus.id,
@@ -40,8 +44,7 @@ menus.title,
 menus.action
 FROM
 menus
- WHERE 
- id in ($in_str)
+$where_clause
 EOD;
         $tree_nodes = DB::connection()
             ->select($sql);

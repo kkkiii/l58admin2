@@ -20,7 +20,7 @@ use Illuminate\Support\Str;
 
 
 
-        <button type="submit" class="btn btn-primary">下一步->赋权</button>
+        <button type="submit" class="btn btn-primary">添加</button>
     </form>
 
 @endsection

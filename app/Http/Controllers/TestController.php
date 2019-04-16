@@ -16,6 +16,9 @@ use App\Biz\PCACodeBiz ;
 use App\My\Category ;
 use App\My\Menu ;
 use IntlChar ;
+use App\My\MyStr ;
+use Illuminate\Support\Str ;
+use Illuminate\Support\Arr;
 class TestController extends Controller
 {
     public function t1(Request $request)
@@ -213,9 +216,25 @@ die() ;
 
 
 
-        Helpers::p(Redis::SMEMBERS('s1')) ;
+//        Helpers::p(Redis::SMEMBERS('s1')) ;
 
 //        Helpers::p(Redis::get('name') ) ;
+
+//        $allow_arr  = (session('allow_routes')) ;
+//        $route =  MyStr::purify_admin_url() ;
+//        $route2 =  MyStr::purify_url_without_host() ;
+//            Helpers::p($allow_arr) ;
+//            Helpers::p($route) ;
+//            Helpers::p($route2) ;
+        $instr = 'opt1' ;
+        $what = Str::replaceFirst( 'opt' , '' ,$instr ) ;
+      Helpers::p( $what );
+
+      $arr = [] ;
+      array_push( $arr ,1) ;array_push( $arr ,2) ;array_push( $arr ,3) ;
+
+      var_dump(session('uname')) ;
+
 
 
     }

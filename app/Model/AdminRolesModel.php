@@ -6,7 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Admin extends Authenticatable
+class AdminRolesModel extends Authenticatable
 {
     use Notifiable;
 
@@ -15,11 +15,11 @@ class Admin extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'uname','password',
-    ];
+//    protected $fillable = [
+//        'name', 'email', 'password',
+//    ];
 
-//    protected $table="yq_users" ;
+    protected $table="admin_roles" ;
 
     /**
      * The attributes that should be hidden for arrays.
