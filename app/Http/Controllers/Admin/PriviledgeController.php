@@ -167,6 +167,7 @@ EOD;
 
         parent::check_module() ;
         $role = DB::table('admin_roles')->where('id', $id)->first();
+        dd($role) ;
         return view('admin.priviledge.edit_role', ['role' => $role]);
 
     }
@@ -204,6 +205,11 @@ EOD;
         $users = DB::table('admins')->paginate(15);
         return view('admin.priviledge.mgrs',compact('users'))  ;
 
+    }
+    public function edit_mgr($id){
+
+        $admin = Admin::find($id);
+        return view('admin.priviledge.edit_mgr',compact('admin'))  ;
     }
 
     public function add_admin(){
