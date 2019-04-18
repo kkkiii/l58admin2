@@ -34,7 +34,7 @@ use Illuminate\Support\Str;
                 <td>
 
                     <a href="/admin/priviledge.roles2mgrs_fill/{{$item->id}}" class="btn btn-info">角色</a>
-                    <a href="/admin/priviledge.edit_role/{{$item->id}}" class="btn btn-info">编辑</a>
+
                     <a href="/admin/priviledge.del/{{$item->id}}" class="btn btn-info">删除</a>
                 </td>
             </tr>

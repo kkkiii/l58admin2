@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{config('app.name')}}</title>
     <link rel="stylesheet" href="/css/app.css">
-
+    @yield('style')
 </head>
 <body>
 

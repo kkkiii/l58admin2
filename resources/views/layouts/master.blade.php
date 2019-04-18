@@ -10,7 +10,7 @@
     <title>{{config('app.name')}}</title>
 
     <link rel="stylesheet" href="/css/app.css">
-
+    @yield('style')
 </head>
 <body>
 
@@ -26,5 +26,6 @@
 
 
 <script src="/js/app.js"></script>
+@yield('js')
 </body>
 </html>
