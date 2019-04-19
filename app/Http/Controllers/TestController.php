@@ -1,6 +1,9 @@
 <?php
 namespace App\Http\Controllers;
+use App\Biz\Area;
+use App\Biz\Org;
 use App\Car;
+use App\Http\Controllers\Common\AreaController;
 use App\Model\Module;
 use App\My\Helpers;
 use Faker\Provider\HtmlLorem;
@@ -130,14 +133,15 @@ print_r("==================================" ) ;
         $str="/2";//此时可以用单引号
 //        var_dump( IntlChar::isdigit( trim($str,'/'))  );
 
-        var_dump(  IntlChar::isdigit(trim($str,'/')) );
+//        var_dump(  IntlChar::isdigit(trim($str,'/')) );
 
+        $org = Org::retrive_item(44) ;
+        dd($org) ;
 
     }
 
     public function t4(Request $request){
-        dd(Auth::id()) ;
-       return view('admin.t4') ;
+      Helpers::p(Area::q_name( '120115', 'dict_areas') )  ;
     }
 
     public function t5(Request $request){
@@ -235,8 +239,35 @@ die() ;
 
       var_dump(session('uname')) ;
 
+    }
+    public function tree(Request $request){
 
+        $sql = <<<EOD
+SELECT
+org.id,
+org.org_name text,
+org.parentid,
+org.province_id,
+org.province,
+org.city_id,
+org.city,
+org.district_id,
+org.district,
+org.sort
+FROM
+org
+ORDER BY sort 
 
+EOD;
+        $tree_nodes = DB::connection()
+            ->select($sql);
+
+        $arr = Helpers::objectToArray($tree_nodes) ;
+        $res =  Category::unlimitedForlayer($arr,'items') ;
+
+//        die() ;
+
+       return view("test.tree",compact('res')) ;
     }
 
 }
